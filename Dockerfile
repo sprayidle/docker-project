@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.19
+FROM phusion/passenger:0.9.19
 
 # Set correct environment variables
 ENV HOME /root
@@ -37,16 +37,3 @@ VOLUME /config
 
 # Source code directory
 VOLUME /source
-
-COPY /source/setup.py /tmp/setup.py
-RUN python /tmp/setup.py install
-
-# Add setup script
-RUN mkdir -p /etc/my_init.d
-COPY /source/setup.sh /etc/my_init.d/setup.sh
-RUN chmod +x /etc/my_init.d/setup.sh
-
-# Add project to runit
-RUN mkdir /etc/service/project
-COPY run.sh /etc/service/project/run
-RUN chmod +x /etc/service/project/run
