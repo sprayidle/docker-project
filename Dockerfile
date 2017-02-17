@@ -37,3 +37,8 @@ VOLUME /config
 
 # Source code directory
 VOLUME /source
+
+# Add setup script
+RUN mkdir -p /etc/my_init.d
+ADD setup.sh /etc/my_init.d/setup.sh
+RUN chmod +x /etc/my_init.d/setup.sh
