@@ -42,3 +42,8 @@ VOLUME /source
 RUN mkdir -p /etc/my_init.d
 ADD setup.sh /etc/my_init.d/setup.sh
 RUN chmod +x /etc/my_init.d/setup.sh
+
+# Add dummy run script
+RUN mkdir -p /etc/service/project
+ADD run.sh /etc/service/project/run
+RUN chmod +x /etc/service/project/run
