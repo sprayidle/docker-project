@@ -1,4 +1,4 @@
-FROM phusion/passenger:0.9.19
+FROM phusion/baseimage:0.9.19
 
 # Set correct environment variables
 ENV HOME /root
