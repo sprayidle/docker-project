@@ -4,7 +4,7 @@ cp /source/setup.py /tmp/setup.py
 python /tmp/setup.py install
 
 # Run project setup
-/source/setup.sh
+source /source/setup.sh
 
 # Add project to runit
 mkdir /etc/service/project
