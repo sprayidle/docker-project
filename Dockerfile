@@ -27,7 +27,7 @@ apt-get install -qy python3.6 wget
 RUN \
 cd /tmp && \
 wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py && \
-python get-pip.py
+python3 get-pip.py
 
 # Expose the web interface
 EXPOSE 5000
