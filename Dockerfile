@@ -24,11 +24,6 @@ add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates univ
 apt-get update -q && \
 apt-get install -qy python3.6 wget 
 
-RUN \
-cd /tmp && \
-wget -O get-pip.py https://bootstrap.pypa.io/get-pip.py && \
-python3 get-pip.py
-
 # Expose the web interface
 EXPOSE 5000
 
