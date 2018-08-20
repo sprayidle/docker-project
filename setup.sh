@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install dependencies
-cp /source/setup.py /tmp/setup.py
-python /tmp/setup.py install
+cd /source
+pipenv install --deploy
 
 # Run project setup
 source /source/setup.sh
