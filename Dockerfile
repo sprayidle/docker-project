@@ -22,7 +22,7 @@ RUN \
 add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse" && \
 add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse" && \
 apt-get update -q && \
-apt-get install -qy python-pip
+apt-get install -qy python3-pip
 
 RUN \
 pip3 install pipenv
