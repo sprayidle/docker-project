@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install dependencies
 cd /source
-pipenv install --deploy
+pip3 install -r requirements.txt
 
 # Run project setup
 source /source/setup.sh
