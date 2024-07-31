@@ -9,20 +9,20 @@ CMD ["/sbin/my_init"]
 
 # Configure user nobody to match unRAID's settings
 RUN \
-usermod -u 99 nobody && \
-usermod -g 100 nobody && \
-usermod -d /home nobody && \
-chown -R nobody:users /home 
+    usermod -u 99 nobody && \
+    usermod -g 100 nobody && \
+    usermod -d /home nobody && \
+    chown -R nobody:users /home
 
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Install Dependencies
 RUN \
-add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse" && \
-add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse" && \
-apt-get update -q && \
-apt-get install -qy python3-pip
+    add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty universe multiverse" && \
+    add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ trusty-updates universe multiverse" && \
+    apt-get update -q && \
+    apt-get install -qy python3-pip
 
 # Expose the web interface
 EXPOSE 5000
